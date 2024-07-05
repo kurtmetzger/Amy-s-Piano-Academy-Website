@@ -21,7 +21,6 @@
 .body{
     margin: 0px;
     display: flex;
-    font-family: 'MyriadProCondensed';
 }
 
 @font-face {
@@ -93,6 +92,7 @@
     display: flex;
     background-color: var(--color-ivory);
     flex-direction: column;
+    font-family: 'Alegreya';
   }
 
   @media (max-width: 768px) {

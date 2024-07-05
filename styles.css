@@ -24,7 +24,10 @@
     font-family: 'MyriadProCondensed';
 }
 
-
+@font-face {
+  font-family: 'Antro Vectra Bolder';
+  src: url(fonts/Antro_Vectra.otf);
+}
 
 .sidebar {
     margin: 0;

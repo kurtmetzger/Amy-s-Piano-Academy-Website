@@ -8,6 +8,16 @@
   src: url(fonts/MyriadProCondensed.ttf);
 }
 
+@font-face {
+  font-family: 'AguafinaScript';
+  src: url(fonts/AGUAFINASCRIPT-REGULAR.TTF);
+}
+
+@font-face {
+  font-family: 'Antro Vectra';
+  src: url(fonts/Antro_Vectra.otf);
+}
+
 .body{
     margin: 0px;
     display: flex;
@@ -24,6 +34,8 @@
     position: fixed;
     height: 100%;
     overflow: hidden;
+    font-family: 'MyriadProCondensed';
+    font-size: larger;
   }
 
   .sidebar a {
@@ -98,4 +110,38 @@
     .header{
         display: none;
     }
+}
+
+.fade-in-text {
+  font-size: 350%;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

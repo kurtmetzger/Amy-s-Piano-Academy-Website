@@ -1,6 +1,9 @@
 :root{
     --color-ivory: #f6f7eb;
-    --color-ebony: #5b6057;
+    --color-gunmetal: #092327;
+    --color-light-red: #ffada6;
+    --color-claret: #711c33;
+    --color-green: #8ea78c;
 }
 
 @font-face {
@@ -20,7 +23,7 @@
 
 .body{
     margin: 0px;
-    display: flex;
+    background-color: var(--color-ivory);
 }
 
 @font-face {
@@ -31,31 +34,34 @@
 .sidebar {
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: 224px;
     background-color: white;
     position: fixed;
-    height: 100%;
+    max-height: max-content;
     overflow: hidden;
-    font-family: 'MyriadProCondensed';
-    font-size: larger;
+    font-family: 'Alegreya';
+    font-size: large;
+    transition: 0.5s;
+    width: 0px;
   }
 
   .sidebar a {
     display: block;
-    color: black;
+    color: var(--color-gunmetal);
     padding: 16px;
     text-decoration: none;
     border-style: solid;
     border-left: hidden;
     height: 16px;
     text-align: end;
-    border-radius: 4px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
+    transition: 0.3s;
+    padding: auto;
   }
 
   .black-key-button{
-    background-color: black;
+    background-color: var(--color-gunmetal);
     padding: 8px !important;
     width: 80px;
     max-height: 8px;
@@ -64,40 +70,154 @@
   }
    
   .sidebar a.active {
-    background-color: #D62839;
+    background-color: var(--color-claret);
     color: var(--color-ivory);
   }
   
   .sidebar a:hover:not(.active) {
-    background-color: var(--color-ebony);
+    background-color: var(--color-gunmetal);
     color: var(--color-ivory);
     
   }
 
 .header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 4px;
-    background-color: var(--color-ebony);
-    max-height: 100px;
-    position: fixed;
+    background-color: var(--color-green);
+    height: 64px;
 }
 
 .header-image-container{
-    height: inherit;
-    width: inherit;
+  position: absolute; /* Positions logo absolutely */
+  left: 50%; /* Move logo container to the center */
+  transform: translateX(-50%);
+  max-height: 64px;
 }
 
+.header-button-container{
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+
+.bar1, .bar2, .bar3 {
+  width: 36px;
+  height: 5px;
+  background-color: var(--color-gunmetal);
+  margin: 8px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 13px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -13px) rotate(45deg);
+}
   
-  div.content {
-    margin-left: 200px;
+.content {
     display: flex;
     background-color: var(--color-ivory);
-    flex-direction: column;
     font-family: 'Alegreya';
+    flex-direction: column;
+    max-width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    transition: 0.5s;
   }
+
+.index-bio{
+  background-color: var(--color-light-red);
+  color: black;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: larger;
+  padding: 16px;
+}
+
+.index-bio button{
+  background-color: var(--color-claret);
+  border-radius: 8px;
+  border-width: 0px;
+  padding: 8px;
+  color: white;
+  font-size: larger;
+  font-family: 'Alegreya', serif;
+  transition: 0.3s;
+  margin-bottom: 16px;
+}
+
+.index-bio button:hover{
+  background-color: #431723;
+  cursor: pointer;
+}
+
+
+.index-testimonial{
+  background-color: var(--color-claret) ;
+  color: white;
+  font-size: xx-large;
+  padding: 16px;
+}
+
+footer{
+  background-color: #092327;
+  color: white;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
+}
+
+
+  .testimonials-row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .testimonial{
+    display: flex;
+    text-align: left;
+    font-size:x-large;
+    padding: 32px;
+    flex: 1;
+  }
+
+  .repeat-dot{
+    height: 8px;
+    width: 8px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .mobile-divider{
+    width: 100%;
+  }
+  
+  .svg-container {
+    height: 100vh; /* Full height */
+    background-image: url(images/tree.svg); /* Path to your SVG */
+    background-repeat: repeat-y; /* Repeat on the Y-axis */
+    background-position: center; /* Center the SVG horizontally */
+    background-size: contain; /* Maintain aspect ratio and stretch vertically */
+}
 
   @media (max-width: 768px) {
     .sidebar {
-        display: none;
+        width: 0px;
     }
 
     .body{
@@ -107,22 +227,31 @@
     div.content{
         margin-left: 0px;
     }
+
+    .testimonial{
+      display: block;
+      width: 100%;
+      min-width: 90%;
+    }
+
+    
 }
 
 @media (min-width: 768px){
-    .header{
-        display: none;
+    .mobile-divider{
+      display: none;
     }
 }
 
 .fade-in-text {
-  font-size: 350%;
+  font-size: 360%;
   animation: fadeIn 5s;
   -webkit-animation: fadeIn 5s;
   -moz-animation: fadeIn 5s;
   -o-animation: fadeIn 5s;
   -ms-animation: fadeIn 5s;
 }
+
 
 @keyframes fadeIn {
   0% { opacity: 0; }

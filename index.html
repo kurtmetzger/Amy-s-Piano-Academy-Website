@@ -4,17 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Amy's Piano Academy - Home Page</title>
+
+    <script>
+      var menuOpen = false;
+
+      function toggleNav(x) {
+        if (menuOpen == false){
+          document.getElementById("sidebar").style.width = "250px";
+          menuOpen = true;
+        } else {
+          document.getElementById("sidebar").style.width = "0";
+          menuOpen = false;
+        }
+        x.classList.toggle("change");
+      }
+    </script>
+    
+      
 </head>
 <body style="margin: 0px;">
-    <div class="sidebar">
-        <a class ="active" href="index.html">Home Page</a>
+      <div class="header">
+        <div class="header-button-container" onclick="toggleNav(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <div class="header-image-container">
+        </div> 
+      </div>
+
+      <div class="sidebar" id="sidebar">
+        <a href="index.html">Home Page</a>
         <a class="black-key-button"></a>
-        <a href="about.html">About</a>
+        <a class="active" href="about.html">About</a>
         <a class="black-key-button"></a>
         <a href="testimonials.html">Testimonials</a>
         <a class="black-key-button"></a>
-        <a href="teachingTree.html">Teaching Tree</a>
+        <a href="teaching_tree.html">Teaching Tree</a>
         <a href="contact.html">Contact</a>
         <a class="black-key-button"></a>
         <a></a>
@@ -30,16 +58,30 @@
         <a ></a>
         <a class="black-key-button"></a><a href=""></a>
       </div>
-
-      <div class="header"> 
-        <div class="header-image-container">
-          <img src="images/Amy's Piano Academy Logo.png" style="max-height: 100%; max-width: 10%; display: block; margin: auto;" alt="logo">
-        </div> 
-      </div>
+  
       
-      <div class="content" style="height: 100vh; text-align: center;">
-          <img src="images/Amy's Piano Academy Logo.png" alt="Amy's Piano Academy Logo" style="max-width: 80%; max-height: 80%; margin: auto; margin-bottom: 0px; display: flex;" >
-          <h1 class="fade-in-text" style="margin-bottom: auto; margin-top: 5px; font-family: 'Antro Vectra Bolder">Explore Your Creativity</h1>
+      <div class="content">
+        <div style="text-align: center; max-height: 1024px; padding-top: 32px; background-image: url(images/Amy_Eisenhutt_September_2024-34.jpg); background-size: cover;">
+          <img src="images/Amy's Piano Academy Logo.png" alt="Amy's Piano Academy Logo" style="max-height: 512px; max-width: 66%; margin: auto; margin-bottom: 0px; display: flex;" >
+          <h1 class="fade-in-text" style="margin-bottom: 36px; margin-top: 5px; font-family: 'Antro Vectra Bolder">Discover Your Creativity!</h1>
+        </div>
+        <div class="index-bio">
+          <div style="flex-wrap: wrap-reverse; display: flex;">
+            <div style="font-size: x-large;">
+              <p style="margin: 16px; max-width: 116vh;">There will be a div on the left with some short text regarding the most important bio information as well as a button below</p>
+              <a href="about.html"><button class="button-primary">Learn More!</button></a>
+            </div>
+            <div style="text-align: center; margin: 16px;">
+              <img src="images/Amy_Eisenhutt_September_2024-40.jpg" height="400px">
+            </div>
+          </div>
+        </div>
+        <div class="index-testimonial">
+          This div shows a snippit from a testimonial
+        </div>
+        <footer>
+          This div will be the footer
+        </footer>
       </div>
 </body>
 </html>

@@ -9,24 +9,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <title>Amy's Piano Academy - Home Page</title>
 
+    <!--Opens and closes the sidebar menu-->
     <script>
-      function openNav() {
-        document.getElementById("sidebar").style.width = "250px";
+      var menuOpen = false;
+
+      function toggleNav(x) {
+        if (menuOpen == false){
+          document.getElementById("sidebar").style.width = "250px";
+          menuOpen = true;
+        } else {
+          document.getElementById("sidebar").style.width = "0";
+          menuOpen = false;
+        }
+        x.classList.toggle("change");
       }
-      
-      /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-      function closeNav() {
-        document.getElementById("sidebar").style.width = "0";
-      } 
     </script>
+
 </head>
 <body style="margin: 0px;">
-    <div class="sidebar">
-        <a href="index.html">Home Page</a>
+      <div class="header"> 
+        <div class="header-button-container" onclick="toggleNav(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <div class="header-image-container">
+          <img src="images/Amy's Piano Academy Logo.png" style="max-height: 64px;">
+        </div> 
+      </div>
+
+      <div class="sidebar" id="sidebar">
+        <a class="active" href="index.html">Home Page</a>
         <a class="black-key-button"></a>
         <a href="about.html">About</a>
         <a class="black-key-button"></a>
-        <a class ="active" href="testimonials.html">Testimonials</a>
+        <a href="testimonials.html">Testimonials</a>
         <a class="black-key-button"></a>
         <a href="teaching_tree.html">Teaching Tree</a>
         <a href="contact.html">Contact</a>
@@ -43,11 +60,6 @@
         <a class="black-key-button"></a>
         <a ></a>
         <a class="black-key-button"></a><a href=""></a>
-    </div>
-
-      <div class="header"> 
-        <div class="header-image-container">
-        </div> 
       </div>
       
       <div class="content" style="text-align: center;">
@@ -72,16 +84,8 @@
               </div>
             </div>
           </div>
-          <div class="testimonial">
-            Lessons with Mrs. Eisenhutt have been not just beneficial, but essential 
-            to my musical career. I never set out to be a professional, rather merely 
-            someone who is skilled enough to take pleasure in his own craft, and Mrs. Eisenhutt 
-            helped me accomplish that goal. Mrs. Eisenhutt's priority with me was always clearly 
-            to help me develop a talent, not to train a pro, and I have always been grateful for that. 
-            She never pushed me too hard, was never disappointed when I forgot to do my theory assignment, 
-            and always made sure it was about my enjoyment of the music. I learned music theory, I learned technique, 
-            I learned sheet music, I learned to put emotion into my playing. In short, Mrs. Eisenhutt 
-            taught me not just how to press the keys or to read the notes, but how to be a musician.
+          <div class="testimonial-image-container">
+            <img src="images/Amy_Eisenhutt_September_2024-105.jpg">
           </div>
         </div>
         <div class="divider">
@@ -136,22 +140,10 @@
           </div>
         </div>
         <div class="testimonials-row">
-          <div class="testimonial">
-            We are so thankful we found Amy's Piano Academy! Our boys receive positive, 
-            gentle teaching that challenges and motivates them to continually grow 
-            in their abilities. They look forward to their lessons every week, and we 
-            know they are getting the best instruction.
+          <div class="testimonial-image-container">
+            <img src="images/Amy_Eisenhutt_September_2024-78.jpg">
           </div>
-          <div class="mobile-divider">
-            <div style="background-color: black; margin-bottom: 4px; height: 8px; margin-left: 32px; margin-right: 32px;"></div>
-            <div style="background-color: black; margin-bottom: 0px; height: 4px; margin-left: 32px; margin-right: 32px;"></div>
-            <div>
-              <div class="repeat-dot">
-              </div>
-              <div class="repeat-dot">
-              </div>
-            </div>
-          </div>
+          
           <div class="testimonial">
             We are so glad that we found Amy's Piano Academy when we were searching for an 
             instructor to provide lessons for our son, and later our daughter. As they have 
@@ -164,6 +156,45 @@
             schedules and move our planned lesson times around other event/practice conflicts. 
             We are excited to see how far our kids decide to go with their piano playing and we 
             know they are in good hands learning from Amy on this part of the journey!
+          </div>
+        </div>
+        <div class="divider">
+          <div style="background-color: black; margin-bottom: 4px; height: 8px; margin-left: 32px; margin-right: 32px;"></div>
+          <div style="background-color: black; margin-bottom: 0px; height: 4px; margin-left: 32px; margin-right: 32px;"></div>
+          <div>
+            <div class="repeat-dot">
+            </div>
+            <div class="repeat-dot">
+            </div>
+          </div>
+        </div>
+        <div class="testimonials-row">
+          <div class="testimonial">
+            Lessons with Mrs. Eisenhutt have been not just beneficial, but essential 
+            to my musical career. I never set out to be a professional, rather merely 
+            someone who is skilled enough to take pleasure in his own craft, and Mrs. Eisenhutt 
+            helped me accomplish that goal. Mrs. Eisenhutt's priority with me was always clearly 
+            to help me develop a talent, not to train a pro, and I have always been grateful for that. 
+            She never pushed me too hard, was never disappointed when I forgot to do my theory assignment, 
+            and always made sure it was about my enjoyment of the music. I learned music theory, I learned technique, 
+            I learned sheet music, I learned to put emotion into my playing. In short, Mrs. Eisenhutt 
+            taught me not just how to press the keys or to read the notes, but how to be a musician.
+          </div>
+          <div class="mobile-divider">
+            <div style="background-color: black; margin-bottom: 4px; height: 8px; margin-left: 32px; margin-right: 32px;"></div>
+            <div style="background-color: black; margin-bottom: 0px; height: 4px; margin-left: 32px; margin-right: 32px;"></div>
+            <div>
+              <div class="repeat-dot">
+              </div>
+              <div class="repeat-dot">
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            We are so thankful we found Amy's Piano Academy! Our boys receive positive, 
+            gentle teaching that challenges and motivates them to continually grow 
+            in their abilities. They look forward to their lessons every week, and we 
+            know they are getting the best instruction.
           </div>
         </div>
       </div>

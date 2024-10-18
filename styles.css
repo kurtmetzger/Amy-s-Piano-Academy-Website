@@ -1,5 +1,5 @@
 :root{
-    --color-ivory: #f6f7eb;
+    --color-ivory: #fceae1;
     --color-gunmetal: #092327;
     --color-light-red: #ffada6;
     --color-claret: #711c33;
@@ -37,12 +37,13 @@
     width: 224px;
     background-color: white;
     position: fixed;
-    max-height: max-content;
     overflow: hidden;
+    max-height: max-content;
     font-family: 'Alegreya';
-    font-size: large;
+    font-size: 20px;
     transition: 0.5s;
     width: 0px;
+    z-index: 1;
   }
 
   .sidebar a {
@@ -52,7 +53,7 @@
     text-decoration: none;
     border-style: solid;
     border-left: hidden;
-    height: 16px;
+    height: 24px;
     text-align: end;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -64,9 +65,9 @@
     background-color: var(--color-gunmetal);
     padding: 8px !important;
     width: 80px;
-    max-height: 8px;
+    max-height: 12px;
     position: absolute;
-    margin-top: 38px;
+    margin-top: 45px;
   }
    
   .sidebar a.active {
@@ -89,6 +90,7 @@
     padding: 4px;
     background-color: var(--color-green);
     height: 64px;
+    z-index: 1;
 }
 
 .header-image-container{
@@ -140,9 +142,11 @@
   display: flex;
   flex-wrap: wrap-reverse;
   flex-direction: row;
-  justify-content: space-around;
   font-size: larger;
+  justify-content: space-between;
   padding: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 .index-bio button{
@@ -170,13 +174,30 @@
   padding: 16px;
 }
 
+.index-speech{
+  color: black;
+  background-color: var(--color-ivory);
+  max-width: max-content;
+  justify-content: center;
+  text-align: center;
+  border-radius: 8px;
+  padding: 16px;
+  margin: auto;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 footer{
+  display: flex;
   background-color: #092327;
   color: white;
   left: 0;
   bottom: 0;
-  width: 100%;
-  padding: 8px;
+  padding: 16px;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 
@@ -185,12 +206,24 @@ footer{
     flex-wrap: wrap;
   }
 
-  .testimonial{
+  .testimonial, .testimonial-image-container{
     display: flex;
     text-align: left;
     font-size:x-large;
-    padding: 32px;
+    padding: 16px;
+    margin: auto;
+    margin-bottom: 32px;
+    margin-top: 32px;
     flex: 1;
+    background-color: white;
+    border-radius: 8px;
+    max-width: 90vw;
+    box-shadow: 12px 12px 16px 0px #ab7a76;
+  }
+
+  .testimonial-image-container img{
+    margin: auto;
+    max-width: 100%;
   }
 
   .repeat-dot{
@@ -228,10 +261,10 @@ footer{
         margin-left: 0px;
     }
 
-    .testimonial{
+    .testimonial, .testimonial-image-container{
       display: block;
-      width: 100%;
-      min-width: 90%;
+      width: 80%;
+      min-width: 60%;
     }
 
     
@@ -240,6 +273,10 @@ footer{
 @media (min-width: 768px){
     .mobile-divider{
       display: none;
+    }
+
+    .testimonial, .testimonial-image-container{
+      margin: 36px;
     }
 }
 

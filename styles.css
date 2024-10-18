@@ -1,7 +1,7 @@
 :root{
     --color-ivory: #fceae1;
     --color-gunmetal: #092327;
-    --color-light-red: #ffada6;
+    --color-light-red: #ffd8d5;
     --color-claret: #711c33;
     --color-green: #8ea78c;
 }
@@ -263,7 +263,7 @@ footer{
 
     .testimonial, .testimonial-image-container{
       display: block;
-      width: 80%;
+      width: 0%;
       min-width: 60%;
     }
 

@@ -9,51 +9,89 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Amy's Piano Academy - Home Page</title>
 
+    <!--Opens and closes the sidebar menu-->
     <script>
-      function openNav() {
-        document.getElementById("sidebar").style.width = "250px";
+      var menuOpen = false;
+
+      function toggleNav(x) {
+        if (menuOpen == false){
+          document.getElementById("sidebar").style.width = "250px";
+          menuOpen = true;
+        } else {
+          document.getElementById("sidebar").style.width = "0";
+          menuOpen = false;
+        }
+        x.classList.toggle("change");
       }
-      
-      /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-      function closeNav() {
-        document.getElementById("sidebar").style.width = "0";
-      } 
     </script>
     
 </head>
 <body style="margin: 0px;">
-    <div class="sidebar">
-      <a href="index.html">Home Page</a>
-      <a class="black-key-button"></a>
-      <a class="active" href="about.html">About</a>
-      <a class="black-key-button"></a>
-      <a href="testimonials.html">Testimonials</a>
-      <a class="black-key-button"></a>
-      <a href="teaching_tree.html">Teaching Tree</a>
-      <a href="contact.html">Contact</a>
-      <a class="black-key-button"></a>
-      <a></a>
-      <a class="black-key-button"></a>
-      <a></a>
-      <a></a>
-      <a class="black-key-button"></a>
-      <a></a>
-      <a class="black-key-button"></a>
-      <a></a>
-      <a></a>
-      <a class="black-key-button"></a>
-      <a ></a>
-      <a class="black-key-button"></a><a href=""></a>
+  <div class="header"> 
+    <div class="header-button-container" onclick="toggleNav(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
     </div>
+    <div class="header-image-container">
+      <img src="images/Amy's Piano Academy Logo.png" style="max-height: 64px;">
+    </div> 
+  </div>
 
-    <div class="header"> 
-      <div class="header-image-container">
-        <img src="images/Amy's Piano Academy Logo.png" style="max-height: 100%; max-width: 10%; display: block; margin: auto; margin-bottom: 0%" alt="logo">
-      </div> 
-    </div>
+  <div class="sidebar" id="sidebar">
+    <a href="index.html">Home Page</a>
+    <a class="black-key-button"></a>
+    <a href="about.html">About</a>
+    <a class="black-key-button"></a>
+    <a href="testimonials.html">Testimonials</a>
+    <a class="black-key-button"></a>
+    <a class="active" href="teaching_tree.html">Teaching Tree</a>
+    <a href="contact.html">Contact</a>
+    <a class="black-key-button"></a>
+    <a></a>
+    <a class="black-key-button"></a>
+    <a></a>
+    <a></a>
+    <a class="black-key-button"></a>
+    <a></a>
+    <a class="black-key-button"></a>
+    <a></a>
+    <a></a>
+    <a class="black-key-button"></a>
+    <a ></a>
+    <a class="black-key-button"></a><a href=""></a>
+  </div>
+
+    
       
-    <div class="content">
-      <div class="svg-container"></div>
+    <div class="content" style="height:min-content;">
+      <div class="svg-container">
+        <div>
+          I'm an initial div explaining exactly what a teaching tree is and how its not a family tree
+        </div>
+        <!--Puts first two side by side-->
+        <div style="display: flex; flex-direction:row; flex-wrap: wrap">
+
+          <div class="tree-card">
+            <div>
+              <img src="" alt="">
+              I'm where an image would be
+            </div>
+            <div>
+              <div>
+                I'm the name
+              </div>
+              I contain all the text required for the card involved and as I continue to add text, it should wrap around to the bottom
+            </div>
+          </div>
+
+          <div class="tree-card">
+            I'm yet another div!
+          </div>
+
+        </div>
+       
+      </div>
     </div>
 </body>
 </html>

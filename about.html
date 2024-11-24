@@ -9,40 +9,106 @@
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Amy's Piano Academy - Home Page</title>
 
+    <!--Opens and closes the sidebar menu-->
     <script>
-      function openNav() {
-        document.getElementById("sidebar").style.width = "250px";
+      var menuOpen = false;
+
+      function toggleNav(x) {
+        if (menuOpen == false){
+          document.getElementById("sidebar").style.width = "250px";
+          menuOpen = true;
+        } else {
+          document.getElementById("sidebar").style.width = "0";
+          menuOpen = false;
+        }
+        x.classList.toggle("change");
       }
-      
-      /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-      function closeNav() {
-        document.getElementById("sidebar").style.width = "0";
-      } 
     </script>
-</head>
-<body style="margin: 0px;">
+
+  </head>
+  <body style="margin: 0px;">
     <div class="header"> 
+      <div class="header-button-container" onclick="toggleNav(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
       <div class="header-image-container">
-        <img src="images/Amy's Piano Academy Logo.png" style="max-height: 100%; max-width: 10%; display: block; margin: auto; margin-bottom: 0%" alt="logo">
+        <img src="images/Amy's Piano Academy Logo.png" style="max-height: 64px;">
       </div> 
     </div>
-      
-    <div class="content" style="height: 100vh;">
+  
+    <div class="sidebar" id="sidebar">
+      <a href="index.html">Home Page</a>
+      <a class="black-key-button"></a>
+      <a class="active" href="about.html">About</a>
+      <a class="black-key-button"></a>
+      <a href="testimonials.html">Testimonials</a>
+      <a class="black-key-button"></a>
+      <a href="teaching_tree.html">Teaching Tree</a>
+      <a href="contact.html">Contact</a>
+      <a class="black-key-button"></a>
+      <a></a>
+      <a class="black-key-button"></a>
+      <a></a>
+      <a></a>
+      <a class="black-key-button"></a>
+      <a></a>
+      <a class="black-key-button"></a>
+      <a></a>
+      <a></a>
+      <a class="black-key-button"></a>
+      <a ></a>
+      <a class="black-key-button"></a><a href=""></a>
+    </div>
+  
+    <div class="content" style="min-height: 100vh; background-color: var(--color-claret)">
       <!--About Content-->
-      <div>
-        <!--Initial Photo-->
-        <div>
-
-        </div>
-        <!--Given Text-->
-        <div>
-
-        </div>
-        <!--Last Image with teaching insignia and bullet points-->
-        <div>
-
+      <div style="margin: 32px; margin-top:0px">
+          <div class="about-text">
+            <h1 style="text-align: center; font-size:48px; font-weight: bold; margin-bottom: 0px; margin-top: 0px;">About</h1>
+            <div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap;">
+              <img class="about-image-left" src="images/Amy_Eisenhutt_September_2024-25.jpg" style="height: 400px; flex-shrink: 0; margin-top: 16px; @media(max-width: 600px){margin-right: 16px}">
+              <p style="flex: 1 1 200px;">
+              &emsp; I began my piano studies in the first grade with the well-known professor and professional concert pianist, Margaret Nichols.  
+              I continued to study piano throughout college and graduated with a Bachelor of Science Degree from Ball State 
+              University.
+              <br>
+              <br>
+              &emsp; For many years I have been teaching as well as playing professionally. My background is in the classics, but I 
+              have spent much time working as an accompanist, church pianist as well as playing in church worship bands. I am a 
+              Nationally certified piano teacher through the Music Teachers National Association.
+              </p>
+            </div>
+            <div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap">
+              <p style="flex: 1 1 200px;">
+                &emsp; My studio offers an excellent setting for learning for students of all ages. 
+              A well-rounded approach for piano is key. Therefore, my lessons touch on theory, 
+              technique, and performance. Teaching techniques are geared to suite the level and 
+              age of the student and pace demands according to the special capabilities of every 
+              student. Repertoire and materials are wisely chosen to fit the student's needs and 
+              interests. In addition, I offer recitals and other optional performance opportunities 
+              throughout each year.
+              <br>
+              <br>
+              &emsp; I am an active member of the Music Teachers of America (MTNA), 
+              the Mid-America Music Association (MAMA) and the National Federation of Music Clubs (NFMC).
+              </p>
+              <div class="about-image-right" style="display: flex; flex-direction: column;">
+                <img  src="images/Amy_Eisenhutt_September_2024-61.jpg" style="height: 400px; object-fit: cover;">
+                <img src="images/MTNACertifiedTeacher.png" style="max-width: 40%; max-height: 40%; margin-top: 16px; margin-left: auto; margin-right: auto;">
+              </div>
+            </div>
         </div>
       </div>
     </div>
+    <footer>
+      <div>
+        email: amy@amyspianoacademy.com 
+      </div>
+      <div>
+        phone number: 816-820-5090
+      </div>
+    </footer>
 </body>
 </html>

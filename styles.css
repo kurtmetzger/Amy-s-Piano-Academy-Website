@@ -337,6 +337,10 @@ footer{
   max-width: 33%;
 }
 
+.contact-photo{
+  border: 20px solid;
+}
+
 
   @media (max-width: 600px) {
     .sidebar {

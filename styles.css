@@ -150,6 +150,10 @@
   position: relative;
 }
 
+.button-primary{
+  margin-bottom: 32px;
+}
+
 .index-bio * {
   z-index: 1;
 }

@@ -264,6 +264,7 @@ footer .footer-phone-number{
     box-shadow: 12px 12px 16px 0px #ab7a76;
     flex-direction: column;
     line-height: 36px;
+    min-width: 300px;
   }
 
   .testimonial-image-container img{

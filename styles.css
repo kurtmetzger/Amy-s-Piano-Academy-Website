@@ -31,6 +31,10 @@
   src: url(fonts/Antro_Vectra.otf);
 }
 
+a:link{
+  color: #8ea78c;
+}
+
 .sidebar {
     margin: 0;
     padding: 0;
@@ -213,6 +217,14 @@ footer{
   justify-content: space-between;
 }
 
+footer *{
+  max-width: 50%;
+}
+
+footer .footer-phone-number{
+  text-align: end;
+}
+
 .about-text{
   background-color: var(--color-light-red);
   display: flex;
@@ -220,8 +232,8 @@ footer{
   justify-content: center;
   flex-wrap: wrap;
   font-size: x-large;
-  margin-left: 0px;
-  margin-right: 0px;
+  margin: 32px; 
+  margin-top:0px;
   padding: 32px;
   margin-top: 32px;
   border-radius: 16px;
@@ -291,6 +303,11 @@ footer{
 
   .contact-card *{
     margin-bottom: 8px;
+    max-width: 100%;
+  }
+
+  .getting-started-image{
+    margin-left: 16px;
   }
 
   .repeat-dot{
@@ -366,11 +383,16 @@ footer{
       margin-right: 16px !important;
     }
 
-    .about-image-left, .about-image-right{
+    .about-image-left, .about-image-right, .getting-started-image{
       margin-left: auto;
       margin-right: auto;
     }
 
+
+    .contact-card, .about-text{
+      margin-left: 16px;
+      margin-right: 16px;
+    }
     
 }
 

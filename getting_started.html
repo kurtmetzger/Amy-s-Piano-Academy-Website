@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>Amy's Piano Academy - Home Page</title>
+
+    <!--Opens and closes the sidebar menu-->
+    <script>
+      var menuOpen = false;
+
+      function toggleNav(x) {
+        if (menuOpen == false){
+          document.getElementById("sidebar").style.width = "250px";
+          menuOpen = true;
+        } else {
+          document.getElementById("sidebar").style.width = "0";
+          menuOpen = false;
+        }
+        x.classList.toggle("change");
+      }
+    </script>
+
+  </head>
+  <body style="margin: 0px;">
+    <div class="header"> 
+      <div class="header-button-container" onclick="toggleNav(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div class="header-image-container">
+        <img src="images/Amy's Piano Academy Logo.png" style="max-height: 64px;">
+      </div> 
+    </div>
+  
+    <div class="sidebar" id="sidebar">
+      <a href="index.html">Home Page</a>
+      <a class="black-key-button"></a>
+      <a class="active" href="about.html">About</a>
+      <a class="black-key-button"></a>
+      <a href="testimonials.html">Testimonials</a>
+      <a class="black-key-button"></a>
+      <a href="teaching_tree.html">Teaching Tree</a>
+      <a href="getting_started.html">Getting Started</a>
+      <a class="black-key-button"></a>
+      <a href="contact.html">Contact</a>
+      <a class="black-key-button"></a>
+      <a></a>
+      <a></a>
+      <a class="black-key-button"></a>
+      <a></a>
+      <a class="black-key-button"></a>
+      <a></a>
+      <a></a>
+      <a class="black-key-button"></a>
+      <a ></a>
+      <a class="black-key-button"></a><a href=""></a>
+    </div>
+  
+    <div class="content" style="min-height: 100vh; background-color: var(--color-ivory)">
+      <!--Getting Started Content-->
+      <div>
+          <div class="about-text" style="background-color: white;">
+            <h1 style="text-align: center; font-size:48px; font-weight: bold; margin-bottom: 0px; margin-top: 0px;">Getting Started</h1>
+            <div style="display: flex; flex-direction: row; align-items: center; flex-wrap: wrap;">
+              <h4>The First Step...</h4>
+              <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <div style="flex: 1 1 200px; min-width: 60%;">
+                  <p>
+                    &emsp; I highly recommend a personal consultation with any music 
+                    teacher that you may ultimately choose to teach your 
+                    child (or yourself). Therefore, I invite you 
+                    and your child to come and visit with me at my music  
+                    studio. I offer this service free of charge because 
+                    I believe it is the first and most important step in making 
+                    a decision towards piano lessons. Although information 
+                    can be given on the phone, there is no substitute for personal 
+                    contact. There are three main objectives of the consultation:
+                  </p>
+                  <ul>
+                    <li>
+                      Personal appraisal of the music teacher as well as the environment 
+                      in which the lessons will be taught.
+                    </li>
+                    <li>
+                      Teacher's appraisal of the student.
+                    </li>
+                    <li>
+                      Student's reaction to the teacher.
+                    </li>
+                  </ul>
+                </div>
+                <img class="getting-started-image" src="images/Amy_Eisenhutt_September_2024-87.jpg" style="height: 400px; flex-shrink: 0; margin-top: 16px;">
+              </div>
+              
+              <h4>FREE Piano Hotline</h4>
+              <p>
+                &emsp; Learning to play the piano doesn't end when your lesson does. 
+                You continue to learn at home as you practice in between your 
+                regularly scheduled lessons. For that reason, I am available 
+                to answer questions that may arise during the week. Give me 
+                a call and I'll be happy to explain techniques or clarify concepts.
+              </p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div>
+        email: amy@amyspianoacademy.com 
+      </div>
+      <div class="footer-phone-number">
+        phone number: 816-820-5090
+      </div>
+    </footer>
+</body>
+</html>
